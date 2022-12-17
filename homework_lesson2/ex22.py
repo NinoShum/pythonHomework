@@ -12,6 +12,7 @@ for i in range(1, number + 1):
 
 for i in range(number):
     sum += result[i]
+    result[i] = round(result[i], 2)
 
 
 sum = round(sum, 2)
