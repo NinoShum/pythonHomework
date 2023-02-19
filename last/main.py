@@ -1,10 +1,10 @@
 import numpy as np
-import mathlotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 a, b, c, d, e = -12, -18, 5, 10, -30
 limit = 10
 step = 0.01
-step_acr = 0.00001
+step_acr = 0.0000001
 line_style = '-'
 color = 'b'
 direct_up = True
@@ -56,7 +56,7 @@ print(x_change)
 for i in range(len(x_change) - 1):
     cur_x = np.arange(x_change[i][0], x_change[i + 1][0] + step, step)
     if x_change[i][1] == 'zero':
-        plt.plot(x_change[i][0], func[i][0], 'go')
+        plt.plot(x_change[i][0], func(x_change[i][0]), 'go')
         plt.rcParams['lines.linestyle'] = switch_line()
         plt.plot(cur_x, func(cur_x), color)
     else:
